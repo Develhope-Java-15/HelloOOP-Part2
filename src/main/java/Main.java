@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,5 +13,13 @@ public class Main {
         maicol.setFirstName("Mai kol");
 
         System.out.println(maicol.getDateOfBirth());
+
+        Scanner scanner  = new Scanner(System.in);
+        String firstName = scanner.nextLine();
+        String surname = scanner.nextLine();
+
+        Person person1 = new Person(firstName, surname, LocalDate.now());
+        System.out.println(person1);
+
     }
 }
